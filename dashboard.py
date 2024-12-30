@@ -101,13 +101,3 @@ if st.sidebar.checkbox("Show Logistic Regression Coefficients"):
     st.write(coefficients)
 
     st.write("Keterangan: Tabel di atas menunjukkan kontribusi tiap fitur terhadap prediksi model Logistic Regression.")
-
-def run_streamlit():
-    os.system("streamlit run app.py --server.port 8501")
-
-
-     # Jalankan aplikasi Streamlit di thread terpisah
-    thread = threading.Thread(target=run_streamlit)
-    thread.start()
-
-    public_url = ngrok.connect(addr="8501")
